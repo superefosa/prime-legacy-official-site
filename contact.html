@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | THE PRIME LEGACY PLACE LTD</title>
-  <meta name="description" content="Contact and enquiries for THE PRIME LEGACY PLACE LTD.">
+  <meta name="description" content="Contact THE PRIME LEGACY PLACE LTD for project enquiries, partnership discussions, supply opportunities, and general business conversations.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,19 +12,28 @@
 </head>
 <body>
 
+<!-- TOPBAR -->
 <div class="topbar">
   <div class="container">
-    <div>Official Corporate Website</div>
-    <div><a href="tel:+4915162401414">Call: +49 151 6240 1414</a> &nbsp;|&nbsp; <a href="https://wa.me/4915162401414">WhatsApp</a></div>
+    <div>Official Corporate Website &mdash; THE PRIME LEGACY PLACE LTD</div>
+    <div class="topbar-right">
+      <a href="tel:+4915162401414">+49 151 6240 1414</a>
+      <span class="topbar-sep">|</span>
+      <a href="https://wa.me/4915162401414" target="_blank" rel="noopener">WhatsApp</a>
+      <span class="topbar-sep">|</span>
+      <a href="mailto:PRINCEOMOTAYO97@GMAIL.COM">Email Us</a>
+    </div>
   </div>
 </div>
+
+<!-- HEADER -->
 <header class="site-header">
   <div class="container nav">
     <a class="brand" href="index.html">
       <img src="assets/img/logo.jpeg" alt="The Prime Legacy Place Ltd logo">
       <div class="brand-text">
         THE PRIME LEGACY PLACE LTD
-        <small>Official Corporate Website</small>
+        <small>RC 9486255 &mdash; Nigeria</small>
       </div>
     </a>
     <nav class="menu">
@@ -35,77 +44,222 @@
       <a href="contact.html">Contact</a>
       <a class="btn" href="contact.html">Make an Enquiry</a>
     </nav>
+    <button class="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
+<!-- MOBILE NAV -->
+<div class="mobile-nav" role="dialog" aria-label="Mobile navigation">
+  <button class="mobile-nav-close" aria-label="Close menu">&times;</button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="projects.html">Projects</a>
+  <a href="contact.html">Contact</a>
+  <a class="btn" href="contact.html">Make an Enquiry</a>
+</div>
 
 <main>
-  <section class="hero" style="padding-bottom:20px">
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
     <div class="container">
-      <span class="kicker">Contact & Enquiries</span>
-      <h1>Open a business conversation</h1>
-      <p class="lead">For project enquiries, partnership discussions, supply opportunities, real estate conversations, or general business contact, reach out using the details below.</p>
+      <div class="page-hero-inner">
+        <span class="kicker reveal">Contact &amp; Enquiries</span>
+        <h1 class="reveal delay-1">Open a business conversation</h1>
+        <p class="lead reveal delay-2">For project enquiries, partnership discussions, supply opportunities, real estate conversations, or general business contact, reach out using the form or direct contact details below.</p>
+      </div>
     </div>
   </section>
 
+  <!-- CONTACT GRID -->
   <section>
     <div class="container grid-2">
-      <div class="card">
-        <h2>Contact details</h2>
-        <div class="table-like"><strong>Company</strong><div>THE PRIME LEGACY PLACE LTD</div></div>
-        <div class="table-like"><strong>Phone / WhatsApp</strong><div><a href="tel:+4915162401414">+49 151 6240 1414</a></div></div>
-        <div class="table-like"><strong>Email</strong><div><a href="mailto:PRINCEOMOTAYO97@GMAIL.COM">PRINCEOMOTAYO97@GMAIL.COM</a></div></div>
-        <div class="table-like"><strong>Registered Address</strong><div>4, Awoniyi Street, Abeokuta Express Way, Agege, Lagos State, Nigeria</div></div>
-        <div class="table-like"><strong>Jurisdiction</strong><div>Nigeria</div></div>
-        <div class="contact-actions">
-          <a class="btn" href="https://wa.me/4915162401414">WhatsApp Now</a>
-          <a class="btn-outline" href="tel:+4915162401414">Call Now</a>
-        </div>
+
+      <!-- ENQUIRY FORM -->
+      <div class="card reveal-left">
+        <span class="section-label">Send a Message</span>
+        <h2 style="margin-bottom:24px;">Make an enquiry</h2>
+        <!-- Formspree: replace YOUR_FORMSPREE_ID below with your endpoint ID e.g. xyzabc12 -->
+        <form id="enquiry-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" novalidate>
+          <!-- Honeypot spam trap — do not remove -->
+          <input type="text" name="_gotcha" style="display:none;">
+          <!-- Optional: redirect after submission (remove if using JS handling) -->
+          <input type="hidden" name="_subject" value="New Enquiry — The Prime Legacy Place Ltd">
+          <input type="hidden" name="_next" value="">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="first_name" placeholder="Your first name" required>
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="last_name" placeholder="Your last name" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone / WhatsApp (optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="+234 or international format">
+          </div>
+          <div class="form-group">
+            <label for="subject">Business Area</label>
+            <select id="subject" name="subject" required>
+              <option value="" disabled selected>Select a business area</option>
+              <option value="contracting">General Contracting</option>
+              <option value="realestate">Real Estate &amp; Property</option>
+              <option value="agro">Agro-Allied Operations</option>
+              <option value="trade">Import, Export &amp; Distribution</option>
+              <option value="general">General Enquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Describe your enquiry, project scope, or the nature of your business interest..." required></textarea>
+          </div>
+          <button type="submit" class="btn form-submit">Send Enquiry</button>
+          <div class="form-success" id="form-success">
+            Your enquiry has been received. We will be in touch shortly.
+          </div>
+          <div id="form-error" style="display:none;padding:16px 20px;background:#fce8e8;border:1px solid #f5a5a5;border-radius:12px;color:#b11217;font-weight:600;margin-top:16px;font-size:0.93rem;">
+            Something went wrong sending your message. Please try again or contact us directly at <a href="mailto:PRINCEOMOTAYO97@GMAIL.COM" style="color:#b11217;text-decoration:underline;">PRINCEOMOTAYO97@GMAIL.COM</a>.
+          </div>
+        </form>
       </div>
-      <div class="card">
-        <h2>Corporate note</h2>
-        <p>For public-facing business presentation, many companies later switch from a personal contact email to a branded company email on their domain. That would be a strong next step for this website.</p>
-        <p>Examples include:</p>
-        <ul class="list">
-          <li>info@yourcompanydomain.com</li>
-          <li>projects@yourcompanydomain.com</li>
-          <li>enquiries@yourcompanydomain.com</li>
-        </ul>
-        <p>This site is already structured so those details can be replaced quickly when your official business email and domain are ready.</p>
+
+      <!-- CONTACT DETAILS -->
+      <div style="display:flex;flex-direction:column;gap:24px;">
+
+        <div class="card reveal-right delay-1">
+          <span class="section-label">Direct Contact</span>
+          <h3 style="margin-bottom:20px;">Contact details</h3>
+          <div class="table-row">
+            <strong>Company</strong>
+            <div>THE PRIME LEGACY PLACE LTD</div>
+          </div>
+          <div class="table-row">
+            <strong>Phone / WhatsApp</strong>
+            <div><a href="tel:+4915162401414">+49 151 6240 1414</a></div>
+          </div>
+          <div class="table-row">
+            <strong>Email</strong>
+            <div><a href="mailto:PRINCEOMOTAYO97@GMAIL.COM">PRINCEOMOTAYO97@GMAIL.COM</a></div>
+          </div>
+          <div class="table-row">
+            <strong>Registered Address</strong>
+            <div>4, Awoniyi Street, Abeokuta Express Way, Agege, Lagos State, Nigeria</div>
+          </div>
+          <div class="table-row">
+            <strong>RC Number</strong>
+            <div>9486255</div>
+          </div>
+          <div class="contact-actions">
+            <a class="btn" href="https://wa.me/4915162401414" target="_blank" rel="noopener">WhatsApp Now</a>
+            <a class="btn-outline" href="tel:+4915162401414">Call Now</a>
+          </div>
+        </div>
+
+        <div class="card reveal-right delay-2">
+          <span class="section-label">Response Time</span>
+          <h3 style="margin-bottom:12px;">What to expect</h3>
+          <p style="font-size:0.93rem;color:var(--muted);margin-bottom:16px;">All enquiries submitted through this page are reviewed by the company. We aim to respond to all formal business enquiries within 2&ndash;3 business days.</p>
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="feature-icon">&#10003;</div>
+              <span>Project and contracting enquiries</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">&#10003;</div>
+              <span>Real estate and property discussions</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">&#10003;</div>
+              <span>Supply, trade, and distribution opportunities</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">&#10003;</div>
+              <span>Partnership and investment conversations</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
+
+  <!-- COMPANY REGISTRATION STRIP -->
+  <section class="band">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="section-label">Verified Corporate Identity</span>
+        <h2>A registered, active Nigerian company</h2>
+        <p class="muted">All business conducted through THE PRIME LEGACY PLACE LTD is backed by formal CAC incorporation and active company status.</p>
+      </div>
+      <div class="grid-4">
+        <div class="card reveal delay-1" style="text-align:center;">
+          <strong style="font-size:1.3rem;display:block;margin-bottom:6px;">RC 9486255</strong>
+          <span style="font-size:0.82rem;color:rgba(255,255,255,0.5);">CAC Registration</span>
+        </div>
+        <div class="card reveal delay-2" style="text-align:center;">
+          <strong style="font-size:1.3rem;display:block;margin-bottom:6px;">14 Apr 2026</strong>
+          <span style="font-size:0.82rem;color:rgba(255,255,255,0.5);">Date of Incorporation</span>
+        </div>
+        <div class="card reveal delay-3" style="text-align:center;">
+          <strong style="font-size:1.3rem;display:block;margin-bottom:6px;"><span class="status-dot"></span>Active</strong>
+          <span style="font-size:0.82rem;color:rgba(255,255,255,0.5);">Company Status</span>
+        </div>
+        <div class="card reveal delay-4" style="text-align:center;">
+          <strong style="font-size:1.3rem;display:block;margin-bottom:6px;">&#8358;6,000,000</strong>
+          <span style="font-size:0.82rem;color:rgba(255,255,255,0.5);">Share Capital</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
-
+<!-- FOOTER -->
 <footer>
-  <div class="container footer-grid">
-    <div>
-      <div class="brand" style="margin-bottom:12px">
-        <img src="assets/img/logo.jpeg" alt="Logo">
-        <div class="brand-text">THE PRIME LEGACY PLACE LTD<small>RC 9486255</small></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/img/logo.jpeg" alt="The Prime Legacy Place Ltd logo">
+          <div class="footer-brand-name">THE PRIME LEGACY PLACE LTD</div>
+          <div class="footer-brand-sub">RC 9486255 &mdash; Incorporated in Nigeria</div>
+        </div>
+        <p class="footer-desc">A private company limited by shares, incorporated in Nigeria. Registered objects cover general contracting, real estate, agro-allied operations, and general trading, import, export, warehousing, and distribution.</p>
       </div>
-      <p class="small muted">A private company limited by shares incorporated in Nigeria. The business objects in its CAC documents cover general contracting, real estate and property development, agro-allied operations, and general trading, import, export, warehousing, supplies, and distribution.</p>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <a href="about.html">About the Company</a>
+        <a href="services.html">Business Areas</a>
+        <a href="projects.html">Projects &amp; Capabilities</a>
+        <a href="contact.html">Contact &amp; Enquiries</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:+4915162401414">+49 151 6240 1414</a>
+        <a href="https://wa.me/4915162401414" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:PRINCEOMOTAYO97@GMAIL.COM">PRINCEOMOTAYO97@GMAIL.COM</a>
+        <a href="contact.html">4, Awoniyi Street, Agege, Lagos, Nigeria</a>
+      </div>
     </div>
-    <div>
-      <h3>Quick Links</h3>
-      <p class="small"><a href="about.html">About the Company</a></p>
-      <p class="small"><a href="services.html">Business Areas</a></p>
-      <p class="small"><a href="projects.html">Projects & Capabilities</a></p>
-      <p class="small"><a href="contact.html">Contact & Enquiries</a></p>
+    <div class="footer-bottom">
+      <p>&copy; <span class="year"></span> THE PRIME LEGACY PLACE LTD. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
-    <div>
-      <h3>Contact</h3>
-      <p class="small">Phone / WhatsApp: <a href="tel:+4915162401414">+49 151 6240 1414</a></p>
-      <p class="small">Public email: <a href="mailto:PRINCEOMOTAYO97@GMAIL.COM">PRINCEOMOTAYO97@GMAIL.COM</a></p>
-      <p class="small">Registered in Nigeria</p>
-    </div>
-  </div>
-  <div class="container" style="margin-top:24px">
-    <p class="small muted">© <span class="year"></span> THE PRIME LEGACY PLACE LTD. All rights reserved.</p>
   </div>
 </footer>
-<script src="script.js"></script>
 
+<script src="script.js"></script>
 </body>
 </html>
