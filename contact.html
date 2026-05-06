@@ -34,6 +34,7 @@
         <small>RC 9486255 &mdash; Nigeria</small>
       </div>
     </a>
+
     <nav class="menu">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -42,6 +43,7 @@
       <a href="contact.html">Contact</a>
       <a class="btn" href="contact.html">Make an Enquiry</a>
     </nav>
+
     <button class="hamburger" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
@@ -77,16 +79,19 @@
         <span class="section-label">Send a Message</span>
         <h2 style="margin-bottom:24px;">Make an enquiry</h2>
 
-        <form id="enquiry-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" novalidate>
+        <form id="enquiry-form" action="https://formsubmit.co/info@primelegacyplace.com" method="POST">
           <input type="text" name="_gotcha" style="display:none;">
+
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_subject" value="New Enquiry — The Prime Legacy Place Ltd">
-          <input type="hidden" name="_next" value="">
 
           <div class="form-row">
             <div class="form-group">
               <label for="first-name">First Name</label>
               <input type="text" id="first-name" name="first_name" placeholder="Your first name" required>
             </div>
+
             <div class="form-group">
               <label for="last-name">Last Name</label>
               <input type="text" id="last-name" name="last_name" placeholder="Your last name" required>
@@ -105,13 +110,13 @@
 
           <div class="form-group">
             <label for="subject">Business Area</label>
-            <select id="subject" name="subject" required>
+            <select id="subject" name="business_area" required>
               <option value="" disabled selected>Select a business area</option>
-              <option value="contracting">General Contracting</option>
-              <option value="realestate">Real Estate &amp; Property</option>
-              <option value="agro">Agro-Allied Operations</option>
-              <option value="trade">Import, Export &amp; Distribution</option>
-              <option value="general">General Enquiry</option>
+              <option value="General Contracting">General Contracting</option>
+              <option value="Real Estate & Property">Real Estate &amp; Property</option>
+              <option value="Agro-Allied Operations">Agro-Allied Operations</option>
+              <option value="Import, Export & Distribution">Import, Export &amp; Distribution</option>
+              <option value="General Enquiry">General Enquiry</option>
             </select>
           </div>
 
@@ -121,14 +126,6 @@
           </div>
 
           <button type="submit" class="btn form-submit">Send Enquiry</button>
-
-          <div class="form-success" id="form-success">
-            Your enquiry has been received. We will be in touch shortly.
-          </div>
-
-          <div id="form-error" style="display:none;padding:16px 20px;background:#fce8e8;border:1px solid #f5a5a5;border-radius:12px;color:#b11217;font-weight:600;margin-top:16px;font-size:0.93rem;">
-            Something went wrong. Please try again or email us directly at <a href="mailto:info@primelegacyplace.com" style="color:#b11217;text-decoration:underline;">info@primelegacyplace.com</a>.
-          </div>
         </form>
       </div>
 
