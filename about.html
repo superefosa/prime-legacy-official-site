@@ -9,7 +9,148 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(201,169,97,0.16), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(255,255,255,0.06), transparent 30%),
+        linear-gradient(135deg, #06111c 0%, #0b1b2a 45%, #101820 100%);
+      color: #f5f5f5;
+    }
+
+    .page-hero {
+      background:
+        linear-gradient(rgba(6,17,28,0.82), rgba(6,17,28,0.95)),
+        url("assets/img/logo.jpeg") center/cover;
+      padding: 150px 0 100px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      background: rgba(201,169,97,0.18);
+      filter: blur(120px);
+      right: -120px;
+      top: 80px;
+      z-index: 0;
+    }
+
+    .page-hero-inner {
+      max-width: 850px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      color: #ffffff;
+      margin: 18px 0 24px;
+    }
+
+    .page-hero .lead {
+      font-size: 1.15rem;
+      line-height: 1.9;
+      color: rgba(255,255,255,0.78);
+    }
+
+    .kicker,
+    .section-label {
+      color: #c9a961;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    main section {
+      padding: 90px 0;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 24px 70px rgba(0,0,0,0.35);
+      backdrop-filter: blur(14px);
+      border-radius: 28px;
+      color: #f5f5f5;
+    }
+
+    .card h2,
+    .card h3 {
+      color: #ffffff;
+    }
+
+    .card p,
+    .muted {
+      color: rgba(255,255,255,0.72);
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(201,169,97,0.45);
+      box-shadow: 0 32px 90px rgba(0,0,0,0.48);
+    }
+
+    .feature-item span {
+      color: rgba(255,255,255,0.82);
+    }
+
+    .feature-icon {
+      background: rgba(201,169,97,0.16);
+      color: #c9a961;
+      border: 1px solid rgba(201,169,97,0.35);
+    }
+
+    .table-row {
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .table-row strong {
+      color: #c9a961;
+    }
+
+    .table-row div {
+      color: rgba(255,255,255,0.82);
+    }
+
+    .band {
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+      border-top: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .icon-box {
+      background: rgba(201,169,97,0.14);
+      color: #c9a961;
+      border: 1px solid rgba(201,169,97,0.35);
+    }
+
+    .cta-section {
+      background:
+        radial-gradient(circle at top right, rgba(201,169,97,0.2), transparent 34%),
+        linear-gradient(135deg, #0d2335, #08121c);
+      border: 1px solid rgba(201,169,97,0.25);
+      box-shadow: 0 30px 90px rgba(0,0,0,0.45);
+    }
+
+    .cta-section h2 {
+      color: #ffffff;
+    }
+
+    .cta-section p {
+      color: rgba(255,255,255,0.75);
+    }
+  </style>
 </head>
+
 <body>
 
 <div class="topbar">
@@ -34,14 +175,16 @@
         <small>RC 9486255 &mdash; Nigeria</small>
       </div>
     </a>
+
     <nav class="menu">
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
+      <a href="about.html" class="active">About</a>
       <a href="services.html">Services</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
       <a class="btn" href="contact.html">Make an Enquiry</a>
     </nav>
+
     <button class="hamburger" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
@@ -64,7 +207,7 @@
   <div class="container">
     <div class="page-hero-inner">
       <span class="kicker reveal">About the Company</span>
-      <h1 class="reveal delay-1">Corporate profile</h1>
+      <h1 class="reveal delay-1">Corporate Profile</h1>
       <p class="lead reveal delay-2">
         THE PRIME LEGACY PLACE LTD is a private company limited by shares, incorporated in Nigeria on 14 April 2026. The company holds active status under RC 9486255 with a diversified scope spanning contracting, real estate, agro-allied operations, and general trade.
       </p>
@@ -81,6 +224,7 @@
       <p>
         THE PRIME LEGACY PLACE LTD is a multi-sector business enterprise established to operate within a broad and commercially relevant scope. The company's registered objects support activities in construction-related contracting, real estate and property operations, agro-allied business, and trading, supply, warehousing, and distribution.
       </p>
+
       <p style="margin-top:16px;">
         As a formally incorporated entity, the company is positioned to engage clients, partners, and stakeholders with the credibility and legal standing of a registered Nigerian business.
       </p>
@@ -131,8 +275,8 @@
         <strong>Registered Address</strong>
         <div>4, Awoniyi Street, Abeokuta Express Way, Agege, Lagos State, Nigeria</div>
       </div>
-
     </div>
+
   </div>
 </section>
 
@@ -141,24 +285,26 @@
     <div class="section-head center reveal">
       <span class="section-label">Our Values</span>
       <h2>How we position ourselves</h2>
-      <p class="muted">The principles that guide how THE PRIME LEGACY PLACE LTD engages the market and its stakeholders.</p>
+      <p class="muted">
+        The principles that guide how THE PRIME LEGACY PLACE LTD engages the market and its stakeholders.
+      </p>
     </div>
 
     <div class="grid-3">
       <div class="card reveal delay-1">
-        <div class="icon-box icon-box-red">&#9670;</div>
+        <div class="icon-box">&#9670;</div>
         <h3>Professionalism</h3>
         <p>We present our business with clarity, seriousness, and respect for proper corporate standards.</p>
       </div>
 
       <div class="card reveal delay-2">
-        <div class="icon-box icon-box-red">&#9654;</div>
+        <div class="icon-box">&#9654;</div>
         <h3>Execution focus</h3>
         <p>We prioritise delivery and commercial outcomes aligned with our registered business areas.</p>
       </div>
 
       <div class="card reveal delay-3">
-        <div class="icon-box icon-box-red">&#8734;</div>
+        <div class="icon-box">&#8734;</div>
         <h3>Long-term value</h3>
         <p>We build for continuity, partnerships, and sustainable growth.</p>
       </div>

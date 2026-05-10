@@ -9,7 +9,152 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    body{
+      background:
+        radial-gradient(circle at top left, rgba(201,169,97,0.16), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(255,255,255,0.06), transparent 30%),
+        linear-gradient(135deg,#06111c 0%,#0b1b2a 45%,#101820 100%);
+      color:#f5f5f5;
+    }
+
+    .page-hero{
+      padding:150px 0 100px;
+      position:relative;
+      overflow:hidden;
+      background:
+        linear-gradient(rgba(6,17,28,0.82),rgba(6,17,28,0.95)),
+        url("assets/img/logo.jpeg") center/cover;
+    }
+
+    .page-hero::after{
+      content:"";
+      position:absolute;
+      width:420px;
+      height:420px;
+      background:rgba(201,169,97,0.18);
+      filter:blur(120px);
+      right:-100px;
+      top:50px;
+    }
+
+    .page-hero-inner{
+      position:relative;
+      z-index:2;
+      max-width:900px;
+    }
+
+    .page-hero h1{
+      font-size:clamp(42px,6vw,72px);
+      line-height:1.05;
+      letter-spacing:-2px;
+      margin:18px 0 24px;
+      color:#fff;
+    }
+
+    .lead{
+      font-size:1.15rem;
+      line-height:1.9;
+      color:rgba(255,255,255,0.78);
+    }
+
+    .kicker,
+    .section-label{
+      color:#c9a961;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-size:.78rem;
+      font-weight:800;
+    }
+
+    main section{
+      padding:90px 0;
+    }
+
+    .section-head h2{
+      color:#fff;
+    }
+
+    .section-head p,
+    .muted{
+      color:rgba(255,255,255,0.72);
+    }
+
+    .card{
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.12);
+      backdrop-filter:blur(14px);
+      border-radius:28px;
+      box-shadow:0 24px 70px rgba(0,0,0,0.35);
+      color:#f5f5f5;
+      transition:all .35s ease;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+      border-color:rgba(201,169,97,0.45);
+      box-shadow:0 32px 90px rgba(0,0,0,0.5);
+    }
+
+    .card h3{
+      color:#fff;
+    }
+
+    .card p{
+      color:rgba(255,255,255,0.74);
+    }
+
+    .icon-box,
+    .icon-box-dark,
+    .icon-box-red{
+      background:rgba(201,169,97,0.14);
+      color:#c9a961;
+      border:1px solid rgba(201,169,97,0.35);
+    }
+
+    .feature-item span{
+      color:rgba(255,255,255,0.82);
+    }
+
+    .feature-icon{
+      background:rgba(201,169,97,0.14);
+      color:#c9a961;
+      border:1px solid rgba(201,169,97,0.35);
+    }
+
+    .contact-actions{
+      margin-top:26px;
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .band{
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+      border-top:1px solid rgba(255,255,255,0.08);
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+
+    .cta-section{
+      background:
+        radial-gradient(circle at top right, rgba(201,169,97,0.2), transparent 34%),
+        linear-gradient(135deg, #0d2335, #08121c);
+      border:1px solid rgba(201,169,97,0.25);
+      box-shadow:0 30px 90px rgba(0,0,0,0.45);
+    }
+
+    .cta-section h2{
+      color:#fff;
+    }
+
+    .cta-section p{
+      color:rgba(255,255,255,0.75);
+    }
+  </style>
 </head>
+
 <body>
 
 <div class="topbar">
@@ -38,7 +183,7 @@
     <nav class="menu">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="services.html">Business Areas</a>
+      <a href="services.html" class="active">Business Areas</a>
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
       <a class="btn" href="contact.html">Make an Enquiry</a>
@@ -66,7 +211,7 @@
     <div class="container">
       <div class="page-hero-inner">
         <span class="kicker reveal">Business Areas</span>
-        <h1 class="reveal delay-1">Core business areas</h1>
+        <h1 class="reveal delay-1">Core Business Areas</h1>
         <p class="lead reveal delay-2">
           THE PRIME LEGACY PLACE LTD operates across four commercially relevant sectors aligned with its registered objects: general contracting, real estate and property, agro-allied operations, and import, export, supply, warehousing, and distribution.
         </p>
@@ -87,7 +232,7 @@
       <div class="grid-2">
 
         <div class="card reveal-left delay-1">
-          <div class="icon-box icon-box-dark">01</div>
+          <div class="icon-box">01</div>
           <h3>General Contracting &amp; Merchandising</h3>
           <p>
             The company is positioned to engage general contracting scopes, commercial project execution, supply-side contracting, merchandising, and related product or service activities connected to its registered objectives.
@@ -114,7 +259,7 @@
         </div>
 
         <div class="card reveal-right delay-1">
-          <div class="icon-box icon-box-dark">02</div>
+          <div class="icon-box">02</div>
           <h3>Real Estate &amp; Property Development</h3>
           <p>
             The company may engage in real estate, landed property, property management, property development, and the acquisition, improvement, leasing, sale, or disposal of land and buildings.
@@ -141,7 +286,7 @@
         </div>
 
         <div class="card reveal-left delay-2">
-          <div class="icon-box icon-box-dark">03</div>
+          <div class="icon-box">03</div>
           <h3>Agro-Allied Operations</h3>
           <p>
             Registered scope covers agro-allied products and farming-related activities including arable farming, poultry, animal husbandry, mechanized farming, organic farming, fish farming, production, food processing, and crop cultivation.
@@ -168,7 +313,7 @@
         </div>
 
         <div class="card reveal-right delay-2">
-          <div class="icon-box icon-box-dark">04</div>
+          <div class="icon-box">04</div>
           <h3>Import, Export, Supply &amp; Distribution</h3>
           <p>
             The company is positioned to engage import, export, trading, marketing, supplies, sales, warehousing, commission agency, manufacturers' representation, and distribution of goods and products connected with its business operations.
@@ -210,7 +355,7 @@
 
       <div class="grid-3">
         <div class="card reveal delay-1">
-          <div class="icon-box icon-box-red">&#9670;</div>
+          <div class="icon-box">&#9670;</div>
           <h3>Clear sector grouping</h3>
           <p>
             Broad registered objects are organised into defined business areas, making the company's scope easier to understand and discuss.
@@ -218,7 +363,7 @@
         </div>
 
         <div class="card reveal delay-2">
-          <div class="icon-box icon-box-red">&#10003;</div>
+          <div class="icon-box">&#10003;</div>
           <h3>Corporate credibility</h3>
           <p>
             The page supports trust by presenting the company's business scope in a serious, formal, and commercially understandable way.
@@ -226,7 +371,7 @@
         </div>
 
         <div class="card reveal delay-3">
-          <div class="icon-box icon-box-red">&#8594;</div>
+          <div class="icon-box">&#8594;</div>
           <h3>Commercial readiness</h3>
           <p>
             The company is presented for enquiries, introductions, supplier discussions, project conversations, and future portfolio development.
@@ -256,6 +401,7 @@
 <footer>
   <div class="container">
     <div class="footer-grid">
+
       <div>
         <div class="footer-brand">
           <img src="assets/img/logo.jpeg" alt="The Prime Legacy Place Ltd logo">
@@ -282,6 +428,7 @@
         <a href="mailto:info@primelegacyplace.com">info@primelegacyplace.com</a>
         <a href="https://www.primelegacyplace.com" target="_blank" rel="noopener">www.primelegacyplace.com</a>
       </div>
+
     </div>
 
     <div class="footer-bottom">

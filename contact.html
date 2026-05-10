@@ -3,23 +3,213 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Contact | THE PRIME LEGACY PLACE LTD</title>
+
   <meta name="description" content="Contact THE PRIME LEGACY PLACE LTD for project enquiries, partnership discussions, supply opportunities, and general business conversations.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+
+    body{
+      background:
+        radial-gradient(circle at top left, rgba(201,169,97,0.16), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(255,255,255,0.06), transparent 30%),
+        linear-gradient(135deg,#06111c 0%,#0b1b2a 45%,#101820 100%);
+      color:#f5f5f5;
+    }
+
+    .page-hero{
+      padding:150px 0 100px;
+      position:relative;
+      overflow:hidden;
+
+      background:
+        linear-gradient(rgba(6,17,28,0.82),rgba(6,17,28,0.95)),
+        url("assets/img/logo.jpeg") center/cover;
+    }
+
+    .page-hero::after{
+      content:"";
+      position:absolute;
+      width:420px;
+      height:420px;
+      background:rgba(201,169,97,0.18);
+      filter:blur(120px);
+      right:-100px;
+      top:50px;
+    }
+
+    .page-hero-inner{
+      position:relative;
+      z-index:2;
+      max-width:850px;
+    }
+
+    .page-hero h1{
+      font-size:clamp(42px,6vw,72px);
+      line-height:1.05;
+      letter-spacing:-2px;
+      margin:18px 0 24px;
+      color:#fff;
+    }
+
+    .lead{
+      font-size:1.15rem;
+      line-height:1.9;
+      color:rgba(255,255,255,0.78);
+    }
+
+    .kicker,
+    .section-label{
+      color:#c9a961;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-size:.78rem;
+      font-weight:800;
+    }
+
+    main section{
+      padding:90px 0;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.12);
+      backdrop-filter:blur(14px);
+      border-radius:28px;
+      box-shadow:0 24px 70px rgba(0,0,0,0.35);
+      color:#f5f5f5;
+      transition:all .35s ease;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+      border-color:rgba(201,169,97,0.45);
+      box-shadow:0 32px 90px rgba(0,0,0,0.5);
+    }
+
+    .card h2,
+    .card h3{
+      color:#fff;
+    }
+
+    .card p{
+      color:rgba(255,255,255,0.74);
+    }
+
+    .form-group label{
+      color:#fff;
+      font-weight:600;
+      margin-bottom:10px;
+      display:block;
+    }
+
+    input,
+    textarea,
+    select{
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.14);
+      color:#fff;
+      border-radius:14px;
+      padding:16px;
+    }
+
+    input::placeholder,
+    textarea::placeholder{
+      color:rgba(255,255,255,0.45);
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus{
+      outline:none;
+      border-color:#c9a961;
+      box-shadow:0 0 0 4px rgba(201,169,97,0.15);
+    }
+
+    select option{
+      background:#0f1b28;
+      color:#fff;
+    }
+
+    .table-row{
+      border-bottom:1px solid rgba(255,255,255,0.12);
+    }
+
+    .table-row strong{
+      color:#c9a961;
+    }
+
+    .table-row div{
+      color:rgba(255,255,255,0.82);
+    }
+
+    .table-row a{
+      color:#fff;
+    }
+
+    .feature-item span{
+      color:rgba(255,255,255,0.82);
+    }
+
+    .feature-icon{
+      background:rgba(201,169,97,0.14);
+      color:#c9a961;
+      border:1px solid rgba(201,169,97,0.35);
+    }
+
+    .band{
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+
+      border-top:1px solid rgba(255,255,255,0.08);
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+
+    .grid-4 .card{
+      padding:40px 20px;
+    }
+
+    .status-dot{
+      background:#45d483;
+      display:inline-block;
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      margin-right:8px;
+    }
+
+    .contact-actions{
+      display:flex;
+      gap:16px;
+      margin-top:28px;
+      flex-wrap:wrap;
+    }
+
+  </style>
 </head>
+
 <body>
 
 <div class="topbar">
   <div class="container">
     <div>Official Corporate Website &mdash; THE PRIME LEGACY PLACE LTD</div>
+
     <div class="topbar-right">
       <a href="tel:+4917679217770">+49 176 79217770</a>
       <span class="topbar-sep">|</span>
+
       <a href="https://wa.me/4917679217770" target="_blank" rel="noopener">WhatsApp</a>
+
       <span class="topbar-sep">|</span>
+
       <a href="mailto:info@primelegacyplace.com">Email Us</a>
     </div>
   </div>
@@ -27,8 +217,10 @@
 
 <header class="site-header">
   <div class="container nav">
+
     <a class="brand" href="index.html">
       <img src="assets/img/logo.jpeg" alt="The Prime Legacy Place Ltd logo">
+
       <div class="brand-text">
         THE PRIME LEGACY PLACE LTD
         <small>RC 9486255 &mdash; Nigeria</small>
@@ -40,214 +232,272 @@
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="active">Contact</a>
       <a class="btn" href="contact.html">Make an Enquiry</a>
     </nav>
 
     <button class="hamburger" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
+
   </div>
 </header>
 
 <div class="mobile-nav" role="dialog" aria-label="Mobile navigation">
   <button class="mobile-nav-close" aria-label="Close menu">&times;</button>
+
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
   <a href="services.html">Services</a>
   <a href="projects.html">Projects</a>
   <a href="contact.html">Contact</a>
+
   <a class="btn" href="contact.html">Make an Enquiry</a>
 </div>
 
 <main>
 
-  <section class="page-hero">
-    <div class="container">
-      <div class="page-hero-inner">
-        <span class="kicker reveal">Contact &amp; Enquiries</span>
-        <h1 class="reveal delay-1">Open a business conversation</h1>
-        <p class="lead reveal delay-2">For project enquiries, partnership discussions, supply opportunities, real estate conversations, or general business contact, reach out using the form or direct contact details below.</p>
-      </div>
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+
+      <span class="kicker reveal">Contact &amp; Enquiries</span>
+
+      <h1 class="reveal delay-1">
+        Open a business conversation
+      </h1>
+
+      <p class="lead reveal delay-2">
+        For project enquiries, partnership discussions, supply opportunities, real estate conversations, or general business contact, reach out using the form or direct contact details below.
+      </p>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <section>
-    <div class="container grid-2">
+<section>
+  <div class="container grid-2">
 
-      <div class="card reveal-left">
-        <span class="section-label">Send a Message</span>
-        <h2 style="margin-bottom:24px;">Make an enquiry</h2>
+    <div class="card reveal-left">
 
-        <form id="enquiry-form" action="https://formsubmit.co/info@primelegacyplace.com" method="POST">
-          <input type="text" name="_gotcha" style="display:none;">
+      <span class="section-label">Send a Message</span>
 
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_subject" value="New Enquiry — The Prime Legacy Place Ltd">
+      <h2 style="margin-bottom:24px;">
+        Make an enquiry
+      </h2>
 
-          <div class="form-row">
-            <div class="form-group">
-              <label for="first-name">First Name</label>
-              <input type="text" id="first-name" name="first_name" placeholder="Your first name" required>
-            </div>
+      <form id="enquiry-form" action="https://formsubmit.co/info@primelegacyplace.com" method="POST">
 
-            <div class="form-group">
-              <label for="last-name">Last Name</label>
-              <input type="text" id="last-name" name="last_name" placeholder="Your last name" required>
-            </div>
+        <input type="text" name="_gotcha" style="display:none;">
+
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_subject" value="New Enquiry — The Prime Legacy Place Ltd">
+
+        <div class="form-row">
+
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+
+            <input type="text" id="first-name" name="first_name" placeholder="Your first name" required>
           </div>
 
           <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            <label for="last-name">Last Name</label>
+
+            <input type="text" id="last-name" name="last_name" placeholder="Your last name" required>
           </div>
 
-          <div class="form-group">
-            <label for="phone">Phone / WhatsApp (optional)</label>
-            <input type="tel" id="phone" name="phone" placeholder="+234 or international format">
-          </div>
-
-          <div class="form-group">
-            <label for="subject">Business Area</label>
-            <select id="subject" name="business_area" required>
-              <option value="" disabled selected>Select a business area</option>
-              <option value="General Contracting">General Contracting</option>
-              <option value="Real Estate & Property">Real Estate &amp; Property</option>
-              <option value="Agro-Allied Operations">Agro-Allied Operations</option>
-              <option value="Import, Export & Distribution">Import, Export &amp; Distribution</option>
-              <option value="General Enquiry">General Enquiry</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" placeholder="Describe your enquiry, project scope, or the nature of your business interest..." required></textarea>
-          </div>
-
-          <button type="submit" class="btn form-submit">Send Enquiry</button>
-        </form>
-      </div>
-
-      <div style="display:flex;flex-direction:column;gap:24px;">
-
-        <div class="card reveal-right delay-1">
-          <span class="section-label">Direct Contact</span>
-          <h3 style="margin-bottom:20px;">Contact details</h3>
-
-          <div class="table-row">
-            <strong>Company</strong>
-            <div>THE PRIME LEGACY PLACE LTD</div>
-          </div>
-
-          <div class="table-row">
-            <strong>Phone / WhatsApp</strong>
-            <div><a href="tel:+4917679217770">+49 176 79217770</a></div>
-          </div>
-
-          <div class="table-row">
-            <strong>Email</strong>
-            <div><a href="mailto:info@primelegacyplace.com">info@primelegacyplace.com</a></div>
-          </div>
-
-          <div class="table-row">
-            <strong>Website</strong>
-            <div><a href="https://www.primelegacyplace.com" target="_blank" rel="noopener">www.primelegacyplace.com</a></div>
-          </div>
-
-          <div class="table-row">
-            <strong>Registered Address</strong>
-            <div>4, Awoniyi Street, Abeokuta Express Way, Agege, Lagos State, Nigeria</div>
-          </div>
-
-          <div class="table-row">
-            <strong>RC Number</strong>
-            <div>9486255</div>
-          </div>
-
-          <div class="contact-actions">
-            <a class="btn" href="https://wa.me/4917679217770" target="_blank" rel="noopener">WhatsApp Now</a>
-            <a class="btn-outline" href="tel:+4917679217770">Call Now</a>
-          </div>
         </div>
 
-        <div class="card reveal-right delay-2">
-          <span class="section-label">Response Time</span>
-          <h3 style="margin-bottom:12px;">What to expect</h3>
-          <p style="font-size:0.93rem;color:var(--muted);margin-bottom:16px;">All enquiries submitted through this page are reviewed by the company. We aim to respond to all formal business enquiries within 2&ndash;3 business days.</p>
+        <div class="form-group">
+          <label for="email">Email Address</label>
 
-          <div class="feature-list">
-            <div class="feature-item">
-              <div class="feature-icon">&#10003;</div>
-              <span>Project and contracting enquiries</span>
-            </div>
-            <div class="feature-item">
-              <div class="feature-icon">&#10003;</div>
-              <span>Real estate and property discussions</span>
-            </div>
-            <div class="feature-item">
-              <div class="feature-icon">&#10003;</div>
-              <span>Supply, trade, and distribution opportunities</span>
-            </div>
-            <div class="feature-item">
-              <div class="feature-icon">&#10003;</div>
-              <span>Partnership and investment conversations</span>
-            </div>
-          </div>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
         </div>
 
-      </div>
+        <div class="form-group">
+          <label for="phone">Phone / WhatsApp</label>
+
+          <input type="tel" id="phone" name="phone" placeholder="+234 or international format">
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Business Area</label>
+
+          <select id="subject" name="business_area" required>
+            <option value="" disabled selected>Select a business area</option>
+
+            <option value="General Contracting">General Contracting</option>
+
+            <option value="Real Estate & Property">Real Estate &amp; Property</option>
+
+            <option value="Agro-Allied Operations">Agro-Allied Operations</option>
+
+            <option value="Import, Export & Distribution">Import, Export &amp; Distribution</option>
+
+            <option value="General Enquiry">General Enquiry</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your Message</label>
+
+          <textarea id="message" name="message" placeholder="Describe your enquiry, project scope, or business interest..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn form-submit">
+          Send Enquiry
+        </button>
+
+      </form>
     </div>
-  </section>
 
-  <section class="band">
-    <div class="container">
-      <div class="section-head center reveal">
-        <span class="section-label">Verified Corporate Identity</span>
-        <h2>A registered, active Nigerian company</h2>
-        <p class="muted">All business conducted through THE PRIME LEGACY PLACE LTD is backed by formal CAC incorporation and active company status.</p>
+    <div style="display:flex;flex-direction:column;gap:24px;">
+
+      <div class="card reveal-right delay-1">
+
+        <span class="section-label">Direct Contact</span>
+
+        <h3 style="margin-bottom:20px;">
+          Contact details
+        </h3>
+
+        <div class="table-row">
+          <strong>Company</strong>
+          <div>THE PRIME LEGACY PLACE LTD</div>
+        </div>
+
+        <div class="table-row">
+          <strong>Phone / WhatsApp</strong>
+          <div><a href="tel:+4917679217770">+49 176 79217770</a></div>
+        </div>
+
+        <div class="table-row">
+          <strong>Email</strong>
+          <div><a href="mailto:info@primelegacyplace.com">info@primelegacyplace.com</a></div>
+        </div>
+
+        <div class="table-row">
+          <strong>Website</strong>
+          <div><a href="https://www.primelegacyplace.com">www.primelegacyplace.com</a></div>
+        </div>
+
+        <div class="table-row">
+          <strong>Registered Address</strong>
+          <div>4, Awoniyi Street, Abeokuta Express Way, Agege, Lagos State, Nigeria</div>
+        </div>
+
+        <div class="table-row">
+          <strong>RC Number</strong>
+          <div>9486255</div>
+        </div>
+
+        <div class="contact-actions">
+          <a class="btn" href="https://wa.me/4917679217770" target="_blank">WhatsApp Now</a>
+
+          <a class="btn-outline" href="tel:+4917679217770">Call Now</a>
+        </div>
+
       </div>
 
-      <div class="grid-4">
-        <div class="card reveal delay-1" style="text-align:center;">
-          <strong style="font-size:1.3rem;display:block;margin-bottom:6px;">RC 9486255</strong>
-          <span style="font-size:0.82rem;color:rgba(255,255,255,0.5);">CAC Registration</span>
+      <div class="card reveal-right delay-2">
+
+        <span class="section-label">Response Time</span>
+
+        <h3 style="margin-bottom:12px;">
+          What to expect
+        </h3>
+
+        <p style="margin-bottom:16px;">
+          All enquiries submitted through this page are reviewed by the company. We aim to respond to formal business enquiries within 2–3 business days.
+        </p>
+
+        <div class="feature-list">
+
+          <div class="feature-item">
+            <div class="feature-icon">&#10003;</div>
+            <span>Project and contracting enquiries</span>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">&#10003;</div>
+            <span>Real estate and property discussions</span>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">&#10003;</div>
+            <span>Supply, trade, and distribution opportunities</span>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">&#10003;</div>
+            <span>Partnership and investment conversations</span>
+          </div>
+
         </div>
 
-        <div class="card reveal delay-2" style="text-align:center;">
-          <strong style="font-size:1.3rem;display:block;margin-bottom:6px;">14 Apr 2026</strong>
-          <span style="font-size:0.82rem;color:rgba(255,255,255,0.5);">Date of Incorporation</span>
-        </div>
-
-        <div class="card reveal delay-3" style="text-align:center;">
-          <strong style="font-size:1.3rem;display:block;margin-bottom:6px;"><span class="status-dot"></span>Active</strong>
-          <span style="font-size:0.82rem;color:rgba(255,255,255,0.5);">Company Status</span>
-        </div>
-
-        <div class="card reveal delay-4" style="text-align:center;">
-          <strong style="font-size:1.3rem;display:block;margin-bottom:6px;">4 Sectors</strong>
-          <span style="font-size:0.82rem;color:rgba(255,255,255,0.5);">Business Scope</span>
-        </div>
       </div>
+
     </div>
-  </section>
+
+  </div>
+</section>
+
+<section class="band">
+
+  <div class="container">
+
+    <div class="section-head center reveal">
+
+      <span class="section-label">
+        Verified Corporate Identity
+      </span>
+
+      <h2>
+        A registered, active Nigerian company
+      </h2>
+
+      <p class="muted">
+        All business conducted through THE PRIME LEGACY PLACE LTD is backed by formal CAC incorporation and active company status.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
 
 </main>
 
 <footer>
   <div class="container">
+
     <div class="footer-grid">
+
       <div>
+
         <div class="footer-brand">
           <img src="assets/img/logo.jpeg" alt="The Prime Legacy Place Ltd logo">
-          <div class="footer-brand-name">THE PRIME LEGACY PLACE LTD</div>
-          <div class="footer-brand-sub">RC 9486255 &mdash; Incorporated in Nigeria</div>
+
+          <div class="footer-brand-name">
+            THE PRIME LEGACY PLACE LTD
+          </div>
+
+          <div class="footer-brand-sub">
+            RC 9486255 &mdash; Incorporated in Nigeria
+          </div>
         </div>
-        <p class="footer-desc">A private company limited by shares, incorporated in Nigeria. Registered objects cover general contracting, real estate, agro-allied operations, and general trading, import, export, warehousing, and distribution.</p>
+
+        <p class="footer-desc">
+          A private company limited by shares, incorporated in Nigeria. Registered objects cover general contracting, real estate, agro-allied operations, and general trading, import, export, warehousing, and distribution.
+        </p>
+
       </div>
 
       <div class="footer-col">
         <h4>Navigation</h4>
+
         <a href="about.html">About the Company</a>
         <a href="services.html">Business Areas</a>
         <a href="projects.html">Projects &amp; Capabilities</a>
@@ -255,24 +505,40 @@
       </div>
 
       <div class="footer-col">
+
         <h4>Contact</h4>
+
         <a href="tel:+4917679217770">+49 176 79217770</a>
-        <a href="https://wa.me/4917679217770" target="_blank" rel="noopener">WhatsApp</a>
-        <a href="mailto:info@primelegacyplace.com">info@primelegacyplace.com</a>
-        <a href="https://www.primelegacyplace.com" target="_blank" rel="noopener">www.primelegacyplace.com</a>
+
+        <a href="https://wa.me/4917679217770" target="_blank">
+          WhatsApp
+        </a>
+
+        <a href="mailto:info@primelegacyplace.com">
+          info@primelegacyplace.com
+        </a>
+
+        <a href="https://www.primelegacyplace.com">
+          www.primelegacyplace.com
+        </a>
+
       </div>
+
     </div>
 
     <div class="footer-bottom">
       <p>&copy; <span class="year"></span> THE PRIME LEGACY PLACE LTD. All rights reserved.</p>
+
       <div class="footer-bottom-links">
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </div>
     </div>
+
   </div>
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>

@@ -9,7 +9,153 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    body{
+      background:
+        radial-gradient(circle at top left, rgba(201,169,97,0.16), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(255,255,255,0.06), transparent 30%),
+        linear-gradient(135deg,#06111c 0%,#0b1b2a 45%,#101820 100%);
+      color:#f5f5f5;
+    }
+
+    .page-hero{
+      padding:150px 0 100px;
+      position:relative;
+      overflow:hidden;
+      background:
+        linear-gradient(rgba(6,17,28,0.82),rgba(6,17,28,0.95)),
+        url("assets/img/logo.jpeg") center/cover;
+    }
+
+    .page-hero::after{
+      content:"";
+      position:absolute;
+      width:420px;
+      height:420px;
+      background:rgba(201,169,97,0.18);
+      filter:blur(120px);
+      right:-100px;
+      top:50px;
+    }
+
+    .page-hero-inner{
+      position:relative;
+      z-index:2;
+      max-width:900px;
+    }
+
+    .page-hero h1{
+      font-size:clamp(42px,6vw,72px);
+      line-height:1.05;
+      letter-spacing:-2px;
+      margin:18px 0 24px;
+      color:#fff;
+    }
+
+    .lead{
+      font-size:1.15rem;
+      line-height:1.9;
+      color:rgba(255,255,255,0.78);
+    }
+
+    .kicker,
+    .section-label{
+      color:#c9a961;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-size:.78rem;
+      font-weight:800;
+    }
+
+    main section{
+      padding:90px 0;
+    }
+
+    .section-head h2{
+      color:#fff;
+    }
+
+    .section-head p,
+    .muted{
+      color:rgba(255,255,255,0.72);
+    }
+
+    .card,
+    .highlight-box{
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.12);
+      backdrop-filter:blur(14px);
+      border-radius:28px;
+      box-shadow:0 24px 70px rgba(0,0,0,0.35);
+      color:#f5f5f5;
+      transition:all .35s ease;
+    }
+
+    .card:hover,
+    .highlight-box:hover{
+      transform:translateY(-6px);
+      border-color:rgba(201,169,97,0.45);
+      box-shadow:0 32px 90px rgba(0,0,0,0.5);
+    }
+
+    .card h3,
+    .highlight-box h3{
+      color:#fff;
+    }
+
+    .card p,
+    .highlight-box p{
+      color:rgba(255,255,255,0.74);
+    }
+
+    .icon-box,
+    .icon-box-dark,
+    .icon-box-red{
+      background:rgba(201,169,97,0.14);
+      color:#c9a961;
+      border:1px solid rgba(201,169,97,0.35);
+    }
+
+    .badge,
+    .badge-dark{
+      background:rgba(201,169,97,0.14);
+      color:#c9a961;
+      border:1px solid rgba(201,169,97,0.35);
+    }
+
+    .highlight-box{
+      background:
+        radial-gradient(circle at top right, rgba(201,169,97,0.24), transparent 36%),
+        linear-gradient(135deg, #0d2335, #08121c);
+      padding:36px;
+    }
+
+    .band{
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+      border-top:1px solid rgba(255,255,255,0.08);
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+
+    .cta-section{
+      background:
+        radial-gradient(circle at top right, rgba(201,169,97,0.2), transparent 34%),
+        linear-gradient(135deg, #0d2335, #08121c);
+      border:1px solid rgba(201,169,97,0.25);
+      box-shadow:0 30px 90px rgba(0,0,0,0.45);
+    }
+
+    .cta-section h2{
+      color:#fff;
+    }
+
+    .cta-section p{
+      color:rgba(255,255,255,0.75);
+    }
+  </style>
 </head>
+
 <body>
 
 <!-- TOPBAR -->
@@ -41,10 +187,11 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
-      <a href="projects.html">Projects</a>
+      <a href="projects.html" class="active">Projects</a>
       <a href="contact.html">Contact</a>
       <a class="btn" href="contact.html">Make an Enquiry</a>
     </nav>
+
     <button class="hamburger" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
@@ -64,18 +211,18 @@
 
 <main>
 
-  <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="container">
       <div class="page-hero-inner">
         <span class="kicker reveal">Projects &amp; Capability</span>
-        <h1 class="reveal delay-1">Capability profile</h1>
-        <p class="lead reveal delay-2">THE PRIME LEGACY PLACE LTD is structured to engage projects across contracting, real estate, agro-allied operations, and trade. This page presents the company's capability framework across each registered business area.</p>
+        <h1 class="reveal delay-1">Capability Profile</h1>
+        <p class="lead reveal delay-2">
+          THE PRIME LEGACY PLACE LTD is structured to engage projects across contracting, real estate, agro-allied operations, and trade. This page presents the company's capability framework across each registered business area.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- CAPABILITY AREAS -->
   <section>
     <div class="container">
       <div class="section-head reveal">
@@ -83,60 +230,61 @@
         <h2>What the company is built to deliver</h2>
         <p>Each capability area reflects the company's registered objects and the scope of work it is authorised and positioned to undertake.</p>
       </div>
+
       <div class="grid-3">
 
         <div class="card reveal delay-1" style="display:flex;flex-direction:column;justify-content:space-between;min-height:260px;">
           <div>
-            <div class="icon-box icon-box-dark">01</div>
+            <div class="icon-box">01</div>
             <h3>Contracting Capability</h3>
             <p>The company is positioned to engage general contracting scopes including commercial project execution, supply-side contracting, and related merchant activities across approved sectors.</p>
           </div>
           <div style="margin-top:20px;">
-            <span class="badge badge-dark">General Contracting</span>
+            <span class="badge">General Contracting</span>
           </div>
         </div>
 
         <div class="card reveal delay-2" style="display:flex;flex-direction:column;justify-content:space-between;min-height:260px;">
           <div>
-            <div class="icon-box icon-box-dark">02</div>
+            <div class="icon-box">02</div>
             <h3>Real Estate &amp; Property</h3>
             <p>Capability covers property acquisition, development, management, leasing, and disposal of land and buildings. The company can engage residential, commercial, and mixed-use property opportunities.</p>
           </div>
           <div style="margin-top:20px;">
-            <span class="badge badge-dark">Property Development</span>
+            <span class="badge">Property Development</span>
           </div>
         </div>
 
         <div class="card reveal delay-3" style="display:flex;flex-direction:column;justify-content:space-between;min-height:260px;">
           <div>
-            <div class="icon-box icon-box-dark">03</div>
+            <div class="icon-box">03</div>
             <h3>Agro-Allied Operations</h3>
             <p>Capability spans arable farming, poultry, fish farming, animal husbandry, mechanized and organic farming, food processing, and agro value-chain activities from production to distribution.</p>
           </div>
           <div style="margin-top:20px;">
-            <span class="badge badge-dark">Agro-Allied</span>
+            <span class="badge">Agro-Allied</span>
           </div>
         </div>
 
         <div class="card reveal delay-1" style="display:flex;flex-direction:column;justify-content:space-between;min-height:260px;">
           <div>
-            <div class="icon-box icon-box-dark">04</div>
+            <div class="icon-box">04</div>
             <h3>Import &amp; Export Trade</h3>
             <p>The company is positioned to engage import, export, and distribution operations, including warehousing, supply chain management, commission agency, and manufacturers' representation.</p>
           </div>
           <div style="margin-top:20px;">
-            <span class="badge badge-dark">Trade &amp; Distribution</span>
+            <span class="badge">Trade &amp; Distribution</span>
           </div>
         </div>
 
         <div class="card reveal delay-2" style="display:flex;flex-direction:column;justify-content:space-between;min-height:260px;">
           <div>
-            <div class="icon-box icon-box-dark">05</div>
+            <div class="icon-box">05</div>
             <h3>Supply &amp; Warehousing</h3>
             <p>Warehousing, supply chain coordination, and distribution of goods and products across approved categories form part of the company's registered trade and distribution capability.</p>
           </div>
           <div style="margin-top:20px;">
-            <span class="badge badge-dark">Supply Chain</span>
+            <span class="badge">Supply Chain</span>
           </div>
         </div>
 
@@ -154,7 +302,6 @@
     </div>
   </section>
 
-  <!-- WHAT TO EXPECT -->
   <section class="band">
     <div class="container">
       <div class="section-head center reveal">
@@ -162,19 +309,23 @@
         <h2>How to engage the company on a project</h2>
         <p class="muted">A straightforward process for opening a business conversation with THE PRIME LEGACY PLACE LTD.</p>
       </div>
+
       <div class="grid-3">
+
         <div class="card reveal delay-1">
-          <div class="icon-box icon-box-red" style="font-size:1.2rem;">1</div>
+          <div class="icon-box" style="font-size:1.2rem;">1</div>
           <h3>Make an enquiry</h3>
           <p>Use the contact page to submit a formal enquiry. Include the business area, project scope, and your contact details so we can respond appropriately.</p>
         </div>
+
         <div class="card reveal delay-2">
-          <div class="icon-box icon-box-red" style="font-size:1.2rem;">2</div>
+          <div class="icon-box" style="font-size:1.2rem;">2</div>
           <h3>Initial conversation</h3>
           <p>We will review your enquiry and respond to schedule an initial conversation to understand the opportunity and assess alignment with our capabilities.</p>
         </div>
+
         <div class="card reveal delay-3">
-          <div class="icon-box icon-box-red" style="font-size:1.2rem;">3</div>
+          <div class="icon-box" style="font-size:1.2rem;">3</div>
           <h3>Formal engagement</h3>
           <p>Where there is a clear fit, we proceed to formal engagement terms, documentation, and project or partnership execution within our registered scope.</p>
         </div>
@@ -183,12 +334,12 @@
     </div>
   </section>
 
-  <!-- CTA -->
   <section>
     <div class="container">
       <div class="cta-section reveal">
         <h2>Have a project in mind?</h2>
         <p>Reach out to discuss a specific project, supply opportunity, property deal, or agro-allied initiative with THE PRIME LEGACY PLACE LTD.</p>
+
         <div class="cta-actions">
           <a class="btn-white btn" href="contact.html">Send an Enquiry</a>
           <a class="btn-outline" style="border-color:rgba(255,255,255,0.3);color:#fff;" href="services.html">View Business Areas</a>
@@ -199,10 +350,10 @@
 
 </main>
 
-<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-grid">
+
       <div>
         <div class="footer-brand">
           <img src="assets/img/logo.jpeg" alt="The Prime Legacy Place Ltd logo">
@@ -211,6 +362,7 @@
         </div>
         <p class="footer-desc">A private company limited by shares, incorporated in Nigeria. Registered objects cover general contracting, real estate, agro-allied operations, and general trading, import, export, warehousing, and distribution.</p>
       </div>
+
       <div class="footer-col">
         <h4>Navigation</h4>
         <a href="about.html">About the Company</a>
@@ -218,6 +370,7 @@
         <a href="projects.html">Projects &amp; Capabilities</a>
         <a href="contact.html">Contact &amp; Enquiries</a>
       </div>
+
       <div class="footer-col">
         <h4>Contact</h4>
         <a href="tel:+4917679217770">+49 176 79217770</a>
@@ -225,7 +378,9 @@
         <a href="mailto:info@primelegacyplace.com">info@primelegacyplace.com</a>
         <a href="https://www.primelegacyplace.com" target="_blank" rel="noopener">www.primelegacyplace.com</a>
       </div>
+
     </div>
+
     <div class="footer-bottom">
       <p>&copy; <span class="year"></span> THE PRIME LEGACY PLACE LTD. All rights reserved.</p>
       <div class="footer-bottom-links">
